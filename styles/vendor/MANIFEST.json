@@ -1,0 +1,238 @@
+{
+  "sources": [
+    {
+      "upstream_url": "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/css/bootstrap.css",
+      "sha256": "4a50207b956a4ab943640ee993118b554a34e96a23261cfe58b9aa1807a7849b"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/cerulean/bootstrap.css",
+      "sha256": "4a6c6ae19e32fa72414067d87fcdf8f97ec6038d502851f284ec87626d2ca155"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/cosmo/bootstrap.css",
+      "sha256": "94ede74323bc1180d8854250c58406fcda842e0ec0966a0cc51ec1318d7d8c6a"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/cyborg/bootstrap.css",
+      "sha256": "6ff6b603e5c41a2931d763ed0fbdc46adc7104e643bddcb81dd4fba439c3d6e1"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/darkly/bootstrap.css",
+      "sha256": "75c9fb7e5793eb7379be2cf9f6fa73ded83ae11ba58cafce4c6e41defd2d43eb"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/flatly/bootstrap.css",
+      "sha256": "fe7fa67b0ff26b7358c465cb65c2a1fa1b6c6e152896c47f427c27d4237901ee"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/journal/bootstrap.css",
+      "sha256": "fc4ff746f070b6b77ce67dc0eaca84bef7b884629cd4777f8a718ec1c795cec8"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/litera/bootstrap.css",
+      "sha256": "a50bc4b4833cf660ac21f4e3ded95a2002d4e749d00adeff4692854f9ceaefc0"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/lumen/bootstrap.css",
+      "sha256": "6673087118e68b3df026c47584397e1dc0afbbe8b1218460d83c5d5998ffbaab"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/lux/bootstrap.css",
+      "sha256": "ee1c40e24ebcb13f6a125afe1dddf6a14dd45c304814148e503fedab810ade09"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/materia/bootstrap.css",
+      "sha256": "4b49909785aea514a522d27463db0edc145ce253ff9981673d297b8bc1cad4c7"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/minty/bootstrap.css",
+      "sha256": "59203ef0235e63365c40ef07f85070985d9e4d915aca38aba143ac4cfca03ca1"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/morph/bootstrap.css",
+      "sha256": "e79845c6173f22d41813ab9e1380031add91255bb4b0487509b90b69ad9fa516"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/pulse/bootstrap.css",
+      "sha256": "2f2f8218a7ab6bcb443354b2d26ede967fd7809c4bbfbee79b34dc19c712a242"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/quartz/bootstrap.css",
+      "sha256": "7d5bc3f5efa31f823ed248e3c99f4734d06367e28d924435d52733409b154508"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/sandstone/bootstrap.css",
+      "sha256": "58ee63aae04eb0189f424d32ee7a06ca1fdf9426c9b7483f5772ccfa8e943a72"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/simplex/bootstrap.css",
+      "sha256": "f7a7bbaffbd5de92cd83e70c8687a35f60384b141e94ad8cc069238f7c1accbe"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/sketchy/bootstrap.css",
+      "sha256": "3e8628f739db411e0ffadb0cd2ffb60800f60417d80887df34804c9ff974b7a4"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/slate/bootstrap.css",
+      "sha256": "8c12165039a81103f12291e8a50337256c493d4964e7270afb194e4fa958ea19"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/solar/bootstrap.css",
+      "sha256": "a8edbfbf1139b5992847d9c83c91c763f47260ec25733a84c96b9f37fbad99e2"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/spacelab/bootstrap.css",
+      "sha256": "b5dc9ecde02819ff1c544aeeece25e098f2399302a877d7693cdfff1796f9051"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/superhero/bootstrap.css",
+      "sha256": "662d4bf01f3f1558a77974f4fc5fd16a247272dbb2915dd55c1a58c2a7cbe8be"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/united/bootstrap.css",
+      "sha256": "4d332fc4e42c9ac6a8da40bc8b1a93e2c25eb03792cdd582d2d40a6323dbb234"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/vapor/bootstrap.css",
+      "sha256": "fcc95724eb7bae51769eaa18fede937fb5ab2434ad91ce6be1aad17a99b5c277"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/yeti/bootstrap.css",
+      "sha256": "b8026a01627cfbec70b7a4399c84706c60a92a42d70eb73f5b4d4dde81f78d11"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootswatch/-/bootswatch-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/zephyr/bootstrap.css",
+      "sha256": "c63823b223df4d5c008aa4ce386632233cad9998ddc34c6edc2be64f921c9401"
+    },
+    {
+      "upstream_url": "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.8.tgz",
+      "version": "5.3.8",
+      "filename": "package/dist/css/bootstrap-grid.css",
+      "sha256": "debef2607bc18da92921bd9559ec954a397ba5439d295e4face3e76f98dab9f3"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css",
+      "version": "1.11.3",
+      "filename": "font/bootstrap-icons.min.css",
+      "sha256": "f643d6fe7e679f9de3e16311600c5ef5cd6b098f7a3a8828fcc29255d2b33e62"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css",
+      "version": "6.7.2",
+      "filename": "css/all.min.css",
+      "sha256": "74005d7c17d4a02f2f25404ec0655d9bc2fdaa53166874c87d7b7eec69d9088a"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2",
+      "version": "1.11.3",
+      "filename": "font/fonts/bootstrap-icons.woff2",
+      "sha256": "476adf42b40325098fcfa8b36ab3e769186bb4f6ce6a249753e2e1a9c22bf99e"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff",
+      "version": "1.11.3",
+      "filename": "font/fonts/bootstrap-icons.woff",
+      "sha256": "bb1de989b83970f6f4e54de1cd974c5cba55b73582da5e1b225a6d0edf029483"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-brands-400.woff2",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-brands-400.woff2",
+      "sha256": "d7236a19bf23cbb2027280e8f51dc99d6c45976a2ed60de73382b034b18a2b68"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-brands-400.ttf",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-brands-400.ttf",
+      "sha256": "808443ae6c8204395add8543da8a90a60b9376fb0f87ed8e8ea37d109596d805"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-regular-400.woff2",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-regular-400.woff2",
+      "sha256": "e3456d1283b9d75337a773dfd147bf908fd02c01b4bf48576d8603a69b13cbe5"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-regular-400.ttf",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-regular-400.ttf",
+      "sha256": "54cf6086f7bb21f9d072ad494a19b4681fa516dd0a14cee52da01d3651a913a3"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-solid-900.woff2",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-solid-900.woff2",
+      "sha256": "aa75998623a391e61c6901794ace832e3ecdd288b56d608f21bea0411acc0b8e"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-solid-900.ttf",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-solid-900.ttf",
+      "sha256": "d2f0593540b0e33ba6de255a54f272d466e31144806956bea8cfdbf7edffc9bd"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-v4compatibility.woff2",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-v4compatibility.woff2",
+      "sha256": "0ce9033c69dc714f5f45ef9bf17d55e4c46bcdfad6799a4e92b38e7781bf86bd"
+    },
+    {
+      "upstream_url": "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-v4compatibility.ttf",
+      "version": "6.7.2",
+      "filename": "webfonts/fa-v4compatibility.ttf",
+      "sha256": "30f6abf6baa425825828793d6dfad1fb63765d0e5abaa7af6feafb9bfcece5a0"
+    }
+  ]
+}

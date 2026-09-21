@@ -1,0 +1,100 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install package and extras
+        run: |
+          pip install -e ".[dev]"
+          pip install pandas mkdocs-material "mkdocstrings[python]"
+
+      - name: Ruff
+        run: |
+          ruff check .
+          ruff format --check . --exclude "*.md"
+
+      - name: Mypy
+        run: mypy
+
+      # Browser and visual suites need Chromium; they run in the browser job.
+      - name: Pytest
+        run: pytest -q -m "not browser and not visual"
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install package and extras
+        run: |
+          pip install -e ".[dev]"
+          pip install pandas mkdocs-material "mkdocstrings[python]"
+
+      - name: MkDocs
+        run: mkdocs build --strict
+
+  browser:
+    runs-on: ubuntu-latest
+    needs: checks
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install package and extras
+        run: pip install -e ".[dev,examples]"
+
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run L3 browser tests
+        run: |
+          set -o pipefail
+          python -m pytest tests/test_l3_prototype.py -q --no-header -p no:cacheprovider 2>&1 | tee /tmp/l3.txt
+          if grep -qE "no tests ran" /tmp/l3.txt; then
+            echo "L3 collected no tests" >&2
+            exit 1
+          fi
+          if ! grep -qE "[0-9]+ passed" /tmp/l3.txt; then
+            echo "L3 did not pass any tests" >&2
+            exit 1
+          fi
+
+      - name: Run visual tests
+        run: python -m pytest tests/visual -q --no-header -p no:cacheprovider --visual
+
+      - name: Upload visual diffs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diffs
+          path: tests/visual/baselines/*.actual.png
+          if-no-files-found: ignore

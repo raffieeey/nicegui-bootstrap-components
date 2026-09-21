@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nicegui-bootstrap-components"
+version = "0.1.0"
+description = "Bootstrap 5 components for NiceGUI, matching the dash-bootstrap-components API, docs, and examples"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "raffieeey" }]
+keywords = ["nicegui", "bootstrap", "ui", "components", "dashboard"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: User Interfaces",
+]
+dependencies = [
+    "nicegui>=3.17.1,<3.18",
+]
+
+[project.optional-dependencies]
+examples = ["pandas"]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "pandas-stubs",
+    "playwright>=1.47",
+    # The NiceGUI pytest plugin imports selenium at collection time.
+    "selenium>=4.20",
+    "pillow>=10",
+]
+dbc-ref = ["dash-bootstrap-components==2.0.4"]
+
+[project.urls]
+Homepage = "https://github.com/raffieeey/nicegui-bootstrap-components"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nicegui_bootstrap_components"]
+
+[tool.hatch.build]
+artifacts = [
+    "src/nicegui_bootstrap_components/static/**/*.css",
+    "src/nicegui_bootstrap_components/static/**/*.ttf",
+    "src/nicegui_bootstrap_components/static/**/*.woff",
+    "src/nicegui_bootstrap_components/static/**/*.woff2",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_ignores = true
+disallow_untyped_defs = true
+files = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+main_file = "scripts/prototype_demo.py"
+markers = [
+    "user: NiceGUI User fixture tests",
+    "browser: Playwright browser tests",
+    "visual: screenshot baseline tests",
+]

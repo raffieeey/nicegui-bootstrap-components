@@ -1,0 +1,749 @@
+- id: iris
+  title: Iris k-means
+  route: /examples/iris/
+  source: examples/gallery/iris/main.py
+  components: [Container, Row, Col, Card, Button, Select, Table, Label]
+  extras: [matplotlib]
+  version: ">=0.1.0"
+- id: graphs_in_tabs
+  title: Graphs in Tabs
+  route: /examples/graphs-in-tabs/
+  source: examples/gallery/graphs_in_tabs/main.py
+  components: [Container, Tabs, Tab, Progress]
+  extras: [matplotlib]
+  version: ">=0.1.0"
+- id: simple_sidebar
+  title: Simple Sidebar
+  route: /examples/simple-sidebar/
+  source: examples/gallery/simple_sidebar/main.py
+  components: [Container, Row, Col, Card, NavLink, Label]
+  extras: []
+  version: ">=0.1.0"
+- id: button_colors
+  title: Button Colors
+  route: /examples/button-colors/
+  source: examples/components/button/colors.py
+  components: [Button]
+  extras: []
+  version: ">=0.1.0"
+- id: button_outline_sizes
+  title: Button Outline Sizes
+  route: /examples/button-outline-sizes/
+  source: examples/components/button/outline_sizes.py
+  components: [Button]
+  extras: []
+  version: ">=0.1.0"
+- id: grid_breakpoints
+  title: Grid Breakpoints
+  route: /examples/grid-breakpoints/
+  source: examples/components/layout/grid_breakpoints.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: alert_dismissible
+  title: Dismissible Alert
+  route: /examples/alert-dismissible/
+  source: examples/components/alert/dismissible.py
+  components: [Alert]
+  extras: []
+  version: ">=0.1.0"
+- id: modal_static_backdrop
+  title: Modal Static Backdrop
+  route: /examples/modal-static-backdrop/
+  source: examples/components/modal/static_backdrop.py
+  components: [Modal, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: accordion_always_open
+  title: Accordion Always Open
+  route: /examples/accordion-always-open/
+  source: examples/components/accordion/always_open.py
+  components: [Accordion, AccordionItem]
+  extras: []
+  version: ">=0.1.0"
+- id: tabs_card
+  title: Tabs Card
+  route: /examples/tabs-card/
+  source: examples/components/tabs/card_tabs.py
+  components: [Tabs, Tab, Card]
+  extras: []
+  version: ">=0.1.0"
+- id: tabs_no_ids
+  title: Tabs without IDs
+  route: /examples/tabs-no-ids/
+  source: examples/components/tabs/no_ids.py
+  components: [Tabs, Tab]
+  extras: []
+  version: ">=0.1.0"
+- id: navbar_fixed_sticky
+  title: Navbar Fixed Sticky
+  route: /examples/navbar-fixed-sticky/
+  source: examples/components/navbar/fixed_sticky.py
+  components: [Navbar, Nav, NavLink]
+  extras: []
+  version: ">=0.1.0"
+- id: input_debounce_modes
+  title: Input Debounce Modes
+  route: /examples/input-debounce-modes/
+  source: examples/components/input/debounce_modes.py
+  components: [Input]
+  extras: []
+  version: ">=0.1.0"
+- id: toast_dismiss_options
+  title: Toast Dismiss Options
+  route: /examples/toast-dismiss-options/
+  source: examples/components/toast/dismiss_options.py
+  components: [Toast, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: spinner_fullscreen
+  title: Spinner Fullscreen
+  route: /examples/spinner-fullscreen/
+  source: examples/components/spinner/fullscreen.py
+  components: [Spinner]
+  extras: []
+  version: ">=0.1.0"
+- id: template_simple_sidebar
+  title: Simple Sidebar Template
+  route: /examples/templates/simple-sidebar/
+  source: examples/templates/simple_sidebar.py
+  components: [Container, Row, Col, Nav, NavLink]
+  extras: []
+  version: ">=0.1.0"
+- id: navbar
+  title: Navbar
+  route: /examples/templates/navbar/
+  source: examples/templates/navbar.py
+  components: [Navbar, Nav, NavLink, Container]
+  extras: []
+  version: ">=0.1.0"
+- id: responsive_sidebar
+  title: Responsive Sidebar
+  route: /examples/templates/responsive-sidebar/
+  source: examples/templates/responsive_sidebar.py
+  components: [Container, Row, Col, Nav, NavLink]
+  extras: []
+  version: ">=0.1.0"
+- id: responsive_collapsible_sidebar
+  title: Responsive Collapsible Sidebar
+  route: /examples/templates/responsive-collapsible-sidebar/
+  source: examples/templates/responsive_collapsible_sidebar.py
+  components: [Container, Row, Col, Nav, NavLink, Collapse, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: sidebar_with_submenus
+  title: Sidebar with Submenus
+  route: /examples/templates/sidebar-with-submenus/
+  source: examples/templates/sidebar_with_submenus.py
+  components: [Container, Row, Col, Nav, NavLink, Collapse]
+  extras: []
+  version: ">=0.1.0"
+- id: collapsible_sidebar_with_icons
+  title: Collapsible Sidebar with Icons
+  route: /examples/templates/collapsible-sidebar-with-icons/
+  source: examples/templates/collapsible_sidebar_with_icons.py
+  components: [Container, Row, Col, Nav, NavLink, Collapse, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_width
+  title: Column Widths
+  route: /examples/layout-width/
+  source: examples/components/layout/width.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_simple
+  title: Basic Layout
+  route: /examples/layout-simple/
+  source: examples/components/layout/simple.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_order_offset
+  title: Order and Offset
+  route: /examples/layout-order-offset/
+  source: examples/components/layout/order_offset.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_breakpoints
+  title: Screen-Size Widths
+  route: /examples/layout-breakpoints/
+  source: examples/components/layout/breakpoints.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_no_gutters
+  title: Row Without Gutters
+  route: /examples/layout-no-gutters/
+  source: examples/components/layout/no_gutters.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_vertical
+  title: Vertical Alignment
+  route: /examples/layout-vertical/
+  source: examples/components/layout/vertical.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_horizontal
+  title: Horizontal Alignment
+  route: /examples/layout-horizontal/
+  source: examples/components/layout/horizontal.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_grid_only
+  title: Grid Only
+  route: /examples/layout-grid-only/
+  source: examples/components/layout/grid_only.py
+  components: [Container, Row, Col]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_simple_stack
+  title: Stacking Objects
+  route: /examples/layout-simple-stack/
+  source: examples/components/layout/simple_stack.py
+  components: [Stack]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_horizontal_stack
+  title: Horizontal Stack
+  route: /examples/layout-horizontal-stack/
+  source: examples/components/layout/horizontal_stack.py
+  components: [Stack]
+  extras: []
+  version: ">=0.1.0"
+- id: layout_stack_spacers
+  title: Stack Spacers
+  route: /examples/layout-stack-spacers/
+  source: examples/components/layout/stack_spacers.py
+  components: [Stack]
+  extras: []
+  version: ">=0.1.0"
+- id: accordion_simple
+  title: Accordion
+  route: /examples/accordion-simple/
+  source: examples/components/accordion/simple.py
+  components: [Accordion, AccordionItem, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: accordion_collapsed
+  title: Accordion Start Collapsed
+  route: /examples/accordion-collapsed/
+  source: examples/components/accordion/collapsed.py
+  components: [Accordion, AccordionItem]
+  extras: []
+  version: ">=0.1.0"
+- id: accordion_flush
+  title: Flush Accordion
+  route: /examples/accordion-flush/
+  source: examples/components/accordion/flush.py
+  components: [Accordion, AccordionItem]
+  extras: []
+  version: ">=0.1.0"
+- id: accordion_callback
+  title: Accordion Callback
+  route: /examples/accordion-callback/
+  source: examples/components/accordion/callback.py
+  components: [Accordion, AccordionItem]
+  extras: []
+  version: ">=0.1.0"
+- id: accordion_always_open_callback
+  title: Accordion Always Open Callback
+  route: /examples/accordion-always-open-callback/
+  source: examples/components/accordion/always_open_callback.py
+  components: [Accordion, AccordionItem]
+  extras: []
+  version: ">=0.1.0"
+- id: alert_simple
+  title: Alerts
+  route: /examples/alert-simple/
+  source: examples/components/alert/simple.py
+  components: [Alert]
+  extras: []
+  version: ">=0.1.0"
+- id: alert_link
+  title: Alert Links
+  route: /examples/alert-link/
+  source: examples/components/alert/link.py
+  components: [Alert]
+  extras: []
+  version: ">=0.1.0"
+- id: alert_content
+  title: Alert Content
+  route: /examples/alert-content/
+  source: examples/components/alert/content.py
+  components: [Alert]
+  extras: []
+  version: ">=0.1.0"
+- id: alert_auto_dismiss
+  title: Auto-dismissing Alert
+  route: /examples/alert-auto-dismiss/
+  source: examples/components/alert/auto_dismiss.py
+  components: [Alert, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: alert_icon
+  title: Alerts with Icons
+  route: /examples/alert-icon/
+  source: examples/components/alert/icon.py
+  components: [Alert]
+  extras: []
+  version: ">=0.1.0"
+- id: badge_simple
+  title: Badges
+  route: /examples/badge-simple/
+  source: examples/components/badge/simple.py
+  components: [Badge, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: badge_size
+  title: Badge Sizing
+  route: /examples/badge-size/
+  source: examples/components/badge/size.py
+  components: [Badge]
+  extras: []
+  version: ">=0.1.0"
+- id: badge_color
+  title: Badge Colors
+  route: /examples/badge-color/
+  source: examples/components/badge/color.py
+  components: [Badge]
+  extras: []
+  version: ">=0.1.0"
+- id: badge_text_color
+  title: Badge Text Colors
+  route: /examples/badge-text-color/
+  source: examples/components/badge/text_color.py
+  components: [Badge]
+  extras: []
+  version: ">=0.1.0"
+- id: badge_pills
+  title: Pill Badges
+  route: /examples/badge-pills/
+  source: examples/components/badge/pills.py
+  components: [Badge]
+  extras: []
+  version: ">=0.1.0"
+- id: badge_positioned
+  title: Positioned Badge
+  route: /examples/badge-positioned/
+  source: examples/components/badge/positioned.py
+  components: [Badge, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: badge_links
+  title: Link Badges
+  route: /examples/badge-links/
+  source: examples/components/badge/links.py
+  components: [Badge]
+  extras: []
+  version: ">=0.1.0"
+- id: table_basic
+  title: Basic Table
+  route: /examples/table-basic/
+  source: examples/components/table/basic.py
+  components: [Table]
+  extras: []
+  version: ">=0.1.0"
+- id: table_options
+  title: Table Options
+  route: /examples/table-options/
+  source: examples/components/table/options.py
+  components: [Table]
+  extras: []
+  version: ">=0.1.0"
+- id: table_dataframe
+  title: Table from DataFrame
+  route: /examples/table-dataframe/
+  source: examples/components/table/dataframe.py
+  components: [Table]
+  extras: [pandas]
+  version: ">=0.1.0"
+- id: breadcrumb_basic
+  title: Breadcrumb — Basic
+  route: /examples/breadcrumb_basic/
+  source: examples/components/breadcrumb/basic.py
+  components: [Breadcrumb]
+  extras: []
+  version: ">=0.1.0"
+- id: breadcrumb_item_styling
+  title: Breadcrumb — Item Styling
+  route: /examples/breadcrumb_item_styling/
+  source: examples/components/breadcrumb/item_styling.py
+  components: [Breadcrumb]
+  extras: []
+  version: ">=0.1.0"
+- id: button_basic
+  title: Button — Basic
+  route: /examples/button_basic/
+  source: examples/components/button/basic.py
+  components: [Button]
+  extras: []
+  version: ">=0.1.0"
+- id: button_link_buttons
+  title: Button — Link Buttons
+  route: /examples/button_link_buttons/
+  source: examples/components/button/link_buttons.py
+  components: [Button]
+  extras: []
+  version: ">=0.1.0"
+- id: button_outline_size_state
+  title: Button — Outline Size State
+  route: /examples/button_outline_size_state/
+  source: examples/components/button/outline_size_state.py
+  components: [Button]
+  extras: []
+  version: ">=0.1.0"
+- id: button_group_basic
+  title: Button Group — Basic
+  route: /examples/button_group_basic/
+  source: examples/components/button_group/basic.py
+  components: [ButtonGroup, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: button_group_size_and_vertical
+  title: Button Group — Size And Vertical
+  route: /examples/button_group_size_and_vertical/
+  source: examples/components/button_group/size_and_vertical.py
+  components: [ButtonGroup, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: card_basic_body
+  title: Card — Basic Body
+  route: /examples/card_basic_body/
+  source: examples/components/card/basic_body.py
+  components: [Card, CardGroup, CardHeader, CardBody, CardFooter, CardImg, CardLink]
+  extras: []
+  version: ">=0.1.0"
+- id: card_colored_outline
+  title: Card — Colored Outline
+  route: /examples/card_colored_outline/
+  source: examples/components/card/colored_outline.py
+  components: [Card, CardGroup, CardHeader, CardBody, CardFooter, CardImg, CardLink]
+  extras: []
+  version: ">=0.1.0"
+- id: card_group_composition
+  title: Card — Group Composition
+  route: /examples/card_group_composition/
+  source: examples/components/card/group_composition.py
+  components: [Card, CardGroup, CardHeader, CardBody, CardFooter, CardImg, CardLink]
+  extras: []
+  version: ">=0.1.0"
+- id: carousel_basic
+  title: Carousel — Basic
+  route: /examples/carousel_basic/
+  source: examples/components/carousel/basic.py
+  components: [Carousel]
+  extras: []
+  version: ">=0.1.0"
+- id: carousel_controls_indicators_interval
+  title: Carousel — Controls Indicators Interval
+  route: /examples/carousel_controls_indicators_interval/
+  source: examples/components/carousel/controls_indicators_interval.py
+  components: [Carousel]
+  extras: []
+  version: ">=0.1.0"
+- id: collapse_basic_usage
+  title: Collapse — Basic Usage
+  route: /examples/collapse_basic_usage/
+  source: examples/components/collapse/basic_usage.py
+  components: [Collapse]
+  extras: []
+  version: ">=0.1.0"
+- id: collapse_dimension_navbar
+  title: Collapse — Dimension Navbar
+  route: /examples/collapse_dimension_navbar/
+  source: examples/components/collapse/dimension_navbar.py
+  components: [Collapse]
+  extras: []
+  version: ">=0.1.0"
+- id: dropdown_menu_basic_usage
+  title: Dropdown Menu — Basic Usage
+  route: /examples/dropdown_menu_basic_usage/
+  source: examples/components/dropdown_menu/basic_usage.py
+  components: [DropdownMenu, DropdownMenuItem]
+  extras: []
+  version: ">=0.1.0"
+- id: dropdown_menu_direction_and_navbar
+  title: Dropdown Menu — Direction And Navbar
+  route: /examples/dropdown_menu_direction_and_navbar/
+  source: examples/components/dropdown_menu/direction_and_navbar.py
+  components: [DropdownMenu, DropdownMenuItem]
+  extras: []
+  version: ">=0.1.0"
+- id: form_basic_usage
+  title: Form — Basic Usage
+  route: /examples/form_basic_usage/
+  source: examples/components/form/basic_usage.py
+  components: [Form, Label, Input, FormText, FormFeedback, FormFloating, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: form_form_floating
+  title: Form — Form Floating
+  route: /examples/form_form_floating/
+  source: examples/components/form/form_floating.py
+  components: [Form, Label, Input, FormText, FormFeedback, FormFloating, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: form_validation_feedback
+  title: Form — Validation Feedback
+  route: /examples/form_validation_feedback/
+  source: examples/components/form/validation_feedback.py
+  components: [Form, Label, Input, FormText, FormFeedback, FormFloating, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: input_labeled_name
+  title: Input — Labeled Name
+  route: /examples/input_labeled_name/
+  source: examples/components/input/labeled_name.py
+  components: [Input, Label]
+  extras: []
+  version: ">=0.1.0"
+- id: input_placeholder_type_size
+  title: Input — Placeholder Type Size
+  route: /examples/input_placeholder_type_size/
+  source: examples/components/input/placeholder_type_size.py
+  components: [Input, Label]
+  extras: []
+  version: ">=0.1.0"
+- id: input_group_amount_currency
+  title: Input Group — Amount Currency
+  route: /examples/input_group_amount_currency/
+  source: examples/components/input_group/amount_currency.py
+  components: [InputGroup, InputGroupText, Input]
+  extras: []
+  version: ">=0.1.0"
+- id: input_group_size_lg_url
+  title: Input Group — Size Lg Url
+  route: /examples/input_group_size_lg_url/
+  source: examples/components/input_group/size_lg_url.py
+  components: [InputGroup, InputGroupText, Input]
+  extras: []
+  version: ">=0.1.0"
+- id: input_group_username_prefix
+  title: Input Group — Username Prefix
+  route: /examples/input_group_username_prefix/
+  source: examples/components/input_group/username_prefix.py
+  components: [InputGroup, InputGroupText, Input]
+  extras: []
+  version: ">=0.1.0"
+- id: jumbotron_alternate_recipe
+  title: Jumbotron Recipe — Alternate Recipe
+  route: /examples/jumbotron_alternate_recipe/
+  source: examples/components/jumbotron/alternate_recipe.py
+  components: [Card, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: jumbotron_basic
+  title: Jumbotron Recipe — Basic
+  route: /examples/jumbotron_basic/
+  source: examples/components/jumbotron/basic.py
+  components: [Card, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: list_group_basic
+  title: List Group — Basic
+  route: /examples/list_group_basic/
+  source: examples/components/list_group/basic.py
+  components: [ListGroup, ListGroupItem]
+  extras: []
+  version: ">=0.1.0"
+- id: list_group_flush
+  title: List Group — Flush
+  route: /examples/list_group_flush/
+  source: examples/components/list_group/flush.py
+  components: [ListGroup, ListGroupItem]
+  extras: []
+  version: ">=0.1.0"
+- id: list_group_numbered
+  title: List Group — Numbered
+  route: /examples/list_group_numbered/
+  source: examples/components/list_group/numbered.py
+  components: [ListGroup, ListGroupItem]
+  extras: []
+  version: ">=0.1.0"
+- id: modal_confirm_publish
+  title: Modal — Confirm Publish
+  route: /examples/modal_confirm_publish/
+  source: examples/components/modal/confirm_publish.py
+  components: [Modal, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: nav_basic
+  title: Nav — Basic
+  route: /examples/nav_basic/
+  source: examples/components/nav/basic.py
+  components: [Nav, NavItem, NavLink]
+  extras: []
+  version: ">=0.1.0"
+- id: nav_vertical
+  title: Nav — Vertical
+  route: /examples/nav_vertical/
+  source: examples/components/nav/vertical.py
+  components: [Nav, NavItem, NavLink]
+  extras: []
+  version: ">=0.1.0"
+- id: offcanvas_basic
+  title: Offcanvas — Basic
+  route: /examples/offcanvas_basic/
+  source: examples/components/offcanvas/basic.py
+  components: [Offcanvas]
+  extras: []
+  version: ">=0.1.0"
+- id: offcanvas_placement_end
+  title: Offcanvas — Placement End
+  route: /examples/offcanvas_placement_end/
+  source: examples/components/offcanvas/placement_end.py
+  components: [Offcanvas]
+  extras: []
+  version: ">=0.1.0"
+- id: pagination_basic
+  title: Pagination — Basic
+  route: /examples/pagination_basic/
+  source: examples/components/pagination/basic.py
+  components: [Pagination]
+  extras: []
+  version: ">=0.1.0"
+- id: pagination_generated_items
+  title: Pagination — Generated Items
+  route: /examples/pagination_generated_items/
+  source: examples/components/pagination/generated_items.py
+  components: [Pagination]
+  extras: []
+  version: ">=0.1.0"
+- id: pagination_size_and_alignment
+  title: Pagination — Size And Alignment
+  route: /examples/pagination_size_and_alignment/
+  source: examples/components/pagination/size_and_alignment.py
+  components: [Pagination]
+  extras: []
+  version: ">=0.1.0"
+- id: placeholder_animation
+  title: Placeholder — Animation
+  route: /examples/placeholder_animation/
+  source: examples/components/placeholder/animation.py
+  components: [Placeholder]
+  extras: []
+  version: ">=0.1.0"
+- id: placeholder_basic
+  title: Placeholder — Basic
+  route: /examples/placeholder_basic/
+  source: examples/components/placeholder/basic.py
+  components: [Placeholder]
+  extras: []
+  version: ">=0.1.0"
+- id: placeholder_size
+  title: Placeholder — Size
+  route: /examples/placeholder_size/
+  source: examples/components/placeholder/size.py
+  components: [Placeholder]
+  extras: []
+  version: ">=0.1.0"
+- id: popover_basic_usage
+  title: Popover — Basic Usage
+  route: /examples/popover_basic_usage/
+  source: examples/components/popover/basic_usage.py
+  components: [Popover, PopoverHeader, PopoverBody]
+  extras: []
+  version: ">=0.1.0"
+- id: popover_header_body
+  title: Popover — Header Body
+  route: /examples/popover_header_body/
+  source: examples/components/popover/header_body.py
+  components: [Popover, PopoverHeader, PopoverBody]
+  extras: []
+  version: ">=0.1.0"
+- id: popover_target_id
+  title: Popover — Target Id
+  route: /examples/popover_target_id/
+  source: examples/components/popover/target_id.py
+  components: [Popover, PopoverHeader, PopoverBody]
+  extras: []
+  version: ">=0.1.0"
+- id: progress_basic_usage
+  title: Progress — Basic Usage
+  route: /examples/progress_basic_usage/
+  source: examples/components/progress/basic_usage.py
+  components: [Progress]
+  extras: []
+  version: ">=0.1.0"
+- id: progress_color
+  title: Progress — Color
+  route: /examples/progress_color/
+  source: examples/components/progress/color.py
+  components: [Progress]
+  extras: []
+  version: ">=0.1.0"
+- id: progress_stacked
+  title: Progress — Stacked
+  route: /examples/progress_stacked/
+  source: examples/components/progress/stacked.py
+  components: [Progress]
+  extras: []
+  version: ">=0.1.0"
+- id: tabs_active_tab_on_change
+  title: Tabs — Active Tab On Change
+  route: /examples/tabs_active_tab_on_change/
+  source: examples/components/tabs/active_tab_on_change.py
+  components: [Tabs, Tab]
+  extras: []
+  version: ">=0.1.0"
+- id: tabs_basic_usage
+  title: Tabs — Basic Usage
+  route: /examples/tabs_basic_usage/
+  source: examples/components/tabs/basic_usage.py
+  components: [Tabs, Tab]
+  extras: []
+  version: ">=0.1.0"
+- id: tabs_composition
+  title: Tabs — Composition
+  route: /examples/tabs_composition/
+  source: examples/components/tabs/composition.py
+  components: [Tabs, Tab]
+  extras: []
+  version: ">=0.1.0"
+- id: tabs_with_card
+  title: Tabs — With Card
+  route: /examples/tabs_with_card/
+  source: examples/components/tabs/with_card.py
+  components: [Tabs, Tab]
+  extras: []
+  version: ">=0.1.0"
+- id: toast_basic_usage
+  title: Toast — Basic Usage
+  route: /examples/toast_basic_usage/
+  source: examples/components/toast/basic_usage.py
+  components: [Toast, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: toast_open_state
+  title: Toast — Open State
+  route: /examples/toast_open_state/
+  source: examples/components/toast/open_state.py
+  components: [Toast, Button]
+  extras: []
+  version: ">=0.1.0"
+- id: tooltip_basic
+  title: Tooltip — Basic
+  route: /examples/tooltip_basic/
+  source: examples/components/tooltip/basic.py
+  components: [Tooltip]
+  extras: []
+  version: ">=0.1.0"
+- id: tooltip_delay
+  title: Tooltip — Delay
+  route: /examples/tooltip_delay/
+  source: examples/components/tooltip/delay.py
+  components: [Tooltip]
+  extras: []
+  version: ">=0.1.0"
+- id: tooltip_target
+  title: Tooltip — Target
+  route: /examples/tooltip_target/
+  source: examples/components/tooltip/target.py
+  components: [Tooltip]
+  extras: []
+  version: ">=0.1.0"

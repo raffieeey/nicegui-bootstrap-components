@@ -1,0 +1,12 @@
+.ngbs .collapse:not(.show), .ngbs-overlay .collapse:not(.show) {
+  visibility: visible !important;
+  display: none !important;
+}
+.ngbs .collapse.show, .ngbs-overlay .collapse.show {
+  visibility: visible !important;
+  display: block !important;
+}
+.ngbs .collapsing, .ngbs-overlay .collapsing { visibility: visible !important; }
+.ngbs .text-primary, .ngbs-overlay .text-primary {
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity, 1)) !important;
+}

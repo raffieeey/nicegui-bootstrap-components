@@ -1,0 +1,9 @@
+/* Keep host flex defaults from changing Bootstrap grid roles. */
+.ngbs .container,
+.ngbs .row,
+.ngbs .col {
+  gap: 0;
+  padding: 0;
+}
+
+/* Overlay z-index policy is part of the scoped theme output. */

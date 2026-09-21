@@ -1,0 +1,107 @@
+site_name: NiceGUI Bootstrap Components
+docs_dir: docs_site
+
+hooks:
+  - docs_site/_hooks/apidoc.py
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: false
+            show_root_heading: true
+            members_order: source
+            docstring_style: google
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - Documentation:
+      - Quickstart: quickstart.md
+      - Components:
+          - Accordion: components/accordion.md
+          - Alert: components/alert.md
+          - Badge: components/badge.md
+          - Breadcrumb: components/breadcrumb.md
+          - Button: components/button.md
+          - Button Group: components/button_group.md
+          - Card: components/card.md
+          - Carousel: components/carousel.md
+          - Collapse: components/collapse.md
+          - Dropdown Menu: components/dropdown_menu.md
+          - Fade: components/fade.md
+          - Form: components/form.md
+          - Input: components/input.md
+          - Input Group: components/input_group.md
+          - Jumbotron: components/jumbotron.md
+          - Layout: components/layout.md
+          - List Group: components/list_group.md
+          - Modal: components/modal.md
+          - Nav: components/nav.md
+          - Navbar: components/navbar.md
+          - Offcanvas: components/offcanvas.md
+          - Pagination: components/pagination.md
+          - Placeholder: components/placeholder.md
+          - Popover: components/popover.md
+          - Progress: components/progress.md
+          - Spinner: components/spinner.md
+          - Table: components/table.md
+          - Tabs: components/tabs.md
+          - Toast: components/toast.md
+          - Tooltip: components/tooltip.md
+      - Themes: themes.md
+      - Icons: icons.md
+      - Guides:
+          - Mixing with NiceGUI pages: guides/mixed-nicegui-pages.md
+          - Callbacks and bindings: guides/callbacks-and-bindings.md
+          - Accessibility: guides/accessibility.md
+          - Assets and CSP: guides/assets-and-csp.md
+      - Compatibility: compatibility.md
+      - FAQ: faq.md
+  - Examples: examples.md
+  - Changelog: changelog.md
+  - Contributing: contributing.md

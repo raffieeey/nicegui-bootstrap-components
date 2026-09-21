@@ -1,0 +1,12 @@
+.collapse:not(.show) {
+  visibility: visible !important;
+  display: none !important;
+}
+.collapse.show {
+  visibility: visible !important;
+  display: block !important;
+}
+.collapsing { visibility: visible !important; }
+.text-primary {
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity, 1)) !important;
+}
