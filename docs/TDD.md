@@ -2470,6 +2470,12 @@ Changelog fragments in `changelog.d/`. Migration notes for observable breaks. Py
 
 Revision note (R1): pin wording unified to “first beta” (was “first alpha” vs OQ17).
 
+Current implementation: the public 0.1.x package uses `nicegui>=3.17.1,<4` rather
+than the earlier proposed minor pin. CI runs the non-browser suite against the
+minimum and latest available 3.x NiceGUI every push and weekly, while the browser
+suite runs against the latest resolver choice. This is a compatibility policy, not
+proof of unshipped future versions; a failing canary requires a compatibility fix.
+
 | Constraint | Proposed default |
 |---|---|
 | Python | `>=3.10,<4` (match NiceGUI 3.17.1). CI 3.10–3.13; add 3.14 when NiceGUI supports it in CI. |

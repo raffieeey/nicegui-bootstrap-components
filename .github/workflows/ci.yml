@@ -5,10 +5,15 @@ on:
     branches:
       - main
   pull_request:
+  schedule:
+    - cron: "0 4 * * 1"
 
 jobs:
   checks:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nicegui: ["==3.17.1", ">=3.17.1,<4"]
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -22,7 +27,9 @@ jobs:
       - name: Install package and extras
         run: |
           pip install -e ".[dev]"
+          pip install "nicegui${{ matrix.nicegui }}"
           pip install pandas mkdocs-material "mkdocstrings[python]"
+          python -m pip check
 
       - name: Ruff
         run: |

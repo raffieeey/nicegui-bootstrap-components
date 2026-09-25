@@ -10,7 +10,9 @@ the [dash-bootstrap-components](https://github.com/facultyai/dash-bootstrap-comp
 
 ## Install
 
-The package requires Python 3.10 or later and targets NiceGUI 3.17.1 and Bootstrap 5.3.8.
+The package requires Python 3.10 or later and NiceGUI >=3.17.1,<4; it has been
+tested against NiceGUI 3.17.1. It bundles Bootstrap 5.3.8. CI checks the oldest
+supported NiceGUI release and the newest available 3.x release.
 
 ```bash
 pip install nicegui-bootstrap-components

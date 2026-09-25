@@ -22,7 +22,7 @@ classifiers = [
     "Topic :: Software Development :: User Interfaces",
 ]
 dependencies = [
-    "nicegui>=3.17.1,<3.18",
+    "nicegui>=3.17.1,<4",
 ]
 
 [project.optional-dependencies]
