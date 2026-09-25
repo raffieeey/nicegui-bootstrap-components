@@ -59,8 +59,16 @@ suite against that installed wheel.
 Do not store PyPI tokens or other publish secrets in the repository. On PyPI,
 register a trusted publisher for this GitHub repository using:
 
-- Workflow name: `Publish`
+- Workflow name: `publish.yml` (PyPI matches the workflow *file name*; the
+  workflow's display name is `Publish`)
 - Environment name: `pypi`
+
+The project does not exist on PyPI yet, so the first release uses a **pending**
+publisher: register it under Account → Publishing (not a project's settings),
+fill in the same four values plus the project name
+`nicegui-bootstrap-components`, and it converts to a normal publisher on first
+use. A pending publisher reserves nothing: publish before anyone else claims
+the name.
 
 The publish workflow should request `id-token: write` and use the `pypi`
 GitHub Environment.

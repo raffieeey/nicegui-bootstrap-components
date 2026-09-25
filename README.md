@@ -172,7 +172,7 @@ composite apps (Iris, Graphs in Tabs, Simple Sidebar), and Layer 3 templates.
 
 ## Documentation
 
-[https://github.com/raffieeey/nicegui-bootstrap-components](https://github.com/raffieeey/nicegui-bootstrap-components)
+[https://raffieeey.github.io/nicegui-bootstrap-components/](https://raffieeey.github.io/nicegui-bootstrap-components/)
 
 ## Development
 
@@ -195,5 +195,5 @@ MIT. See [LICENSE](LICENSE).
 
 ## Status
 
-0.1.0. Matches the dash-bootstrap-components 2.0.4 API for the component set listed
-above. Not yet on PyPI.
+0.1.0, first public release. Matches the dash-bootstrap-components 2.0.4 API for the
+component set listed above.

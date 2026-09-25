@@ -255,10 +255,14 @@ def _step_smoke(wheel_path: Path | None, *, build_skipped: bool) -> str:
                 "pip install of nicegui failed",
                 output=output,
             )
+        # Probe the documented top-level surface (README "Top-level exports").
+        # `set_theme` is a ThemeController method, not a top-level export.
         probe = (
             "import nicegui_bootstrap_components as pkg\n"
-            "assert hasattr(pkg, 'bs'), 'package does not expose bs'\n"
-            "assert hasattr(pkg, 'set_theme'), 'package does not expose set_theme'\n"
+            "expected = ('StyleMode', 'ThemeController', 'bs', 'dbc', 'icons', 'setup', 'themes')\n"
+            "missing = [name for name in expected if not hasattr(pkg, name)]\n"
+            "assert not missing, f'package does not expose: {missing}'\n"
+            "assert pkg.__version__, 'package does not expose __version__'\n"
         )
         code, output = _run([str(python), "-c", probe], env=env)
         if code != 0:

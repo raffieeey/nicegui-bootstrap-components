@@ -5,6 +5,8 @@ based on Keep a Changelog and this project adheres to Semantic Versioning.
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-09-26
+
 ### Added
 
 - Complete Bootstrap 5 component surface with native (`bs`) and DBC-compat

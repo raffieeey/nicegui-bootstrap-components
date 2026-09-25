@@ -42,6 +42,7 @@ dbc-ref = ["dash-bootstrap-components==2.0.4"]
 
 [project.urls]
 Homepage = "https://github.com/raffieeey/nicegui-bootstrap-components"
+Documentation = "https://raffieeey.github.io/nicegui-bootstrap-components/"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/nicegui_bootstrap_components"]
