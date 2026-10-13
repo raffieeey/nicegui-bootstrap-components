@@ -491,6 +491,16 @@ class _SelectImpl(BootstrapValueElement):
                     )
         self.on("change", self._on_dom_change, js_handler=_JS_SELECT_CHANGE)
 
+    def _handle_value_change(self, *args: Any, **kwargs: Any) -> None:
+        super()._handle_value_change(*args, **kwargs)
+        current = None if self.value is None or self.value == "" else _html_value(self.value)
+        self._props["value"] = "" if current is None else current
+        for option in self.default_slot.children:
+            if option._props.get("hidden"):
+                _set_flag(option, "selected", current is None)
+            else:
+                _set_flag(option, "selected", option._props.get("value") == current)
+
     def _on_dom_change(self, e: Any) -> None:
         payload = _payload_from_event(e)
         if isinstance(payload, list):

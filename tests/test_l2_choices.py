@@ -413,3 +413,19 @@ async def test_choice_groups_render(user: User) -> None:
 
     await user.open("/")
     await user.should_see("P")
+
+
+async def test_select_server_value_updates_selected_option(user: User) -> None:
+    setup(mode=StyleMode.MIXED)
+    box: dict[str, Select] = {}
+
+    @ui.page("/")
+    def page() -> None:
+        box["s"] = Select(options=["a", "b"], value="a")
+
+    await user.open("/")
+    sel = box["s"]
+    sel.value = "b"
+    flags = {c._props["value"]: c._props.get("selected") for c in sel.default_slot.children}
+    assert flags == {"a": None, "b": True}
+    assert sel._props["value"] == "b"
