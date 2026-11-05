@@ -42,14 +42,10 @@ tweak is enough.
 
 ## How do I persist input values across page reloads?
 
-Set `persist="local"` or `persist="session"` on the value-carrying control
-and give it a public `id`. The library reads and writes that id’s value
-through `localStorage` or `sessionStorage`. Restore happens when the
-element is created and does **not** fire `on_change`, so a restore cannot
-loop into your handler or into a binding. `persist` without a public `id`
-is rejected. See the persistence section in [Compatibility](compatibility.md)
-for the exact props, and [Callbacks and bindings](guides/callbacks-and-bindings.md)
-for how `on_change` and `bind_value` interact with restored values.
+Built-in component persistence is currently unsupported. `persist="local"` and
+`persist="session"` raise an error instead of silently discarding state. Use
+application-managed storage and restore the component value yourself. See
+[Compatibility](compatibility.md) and [Callbacks and bindings](guides/callbacks-and-bindings.md).
 
 ## Do tooltips and popovers get clipped inside `overflow: hidden` parents?
 

@@ -2,7 +2,8 @@
 
 This library ships every Bootswatch 5.3.8 build compiled locally, together with
 Bootstrap itself. Theme stylesheets therefore work offline. No CDN request is
-required unless you opt in with `cdn=True`.
+required unless you opt in with `cdn=True`. Remote font imports are removed from
+bundled themes; browsers use the themes’ remaining font stacks and system fallbacks.
 
 Use `setup` to choose a theme once at process start, then render Bootstrap
 components inside `bs.scope()`. The same bundled files power [the demo

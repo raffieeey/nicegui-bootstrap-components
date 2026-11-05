@@ -118,8 +118,8 @@ def page() -> None:
 
 `bind_value` keeps `state.name` and the control in sync. `bind_text_from`
 (NiceGUI) mirrors that value onto a label. You can use a handler, a
-binding, or both; restoration from `persist=` does **not** fire `on_change`
-(see [Compatibility](../compatibility.md)).
+binding, or both. Built-in component `persist=` is unsupported; manage storage
+explicitly in the application (see [Compatibility](../compatibility.md)).
 
 Not every Bootstrap component is a value control. Structural pieces
 (`Card`, `Row`, `Navbar`) have no `.value`. Check the component page when
@@ -189,10 +189,8 @@ have no equivalents; branch in ordinary Python instead.
 
 ## Persistence
 
-`persist="local"` or `persist="session"` plus a public `id` stores the
-control’s value across reloads. Restore does not fire `on_change`, so a
-binding updates and your handler does not. That is intentional: a reload
-should not look like a user edit. Details are in
+Built-in component persistence is currently unsupported: non-off `persist`
+raises an error. Store and restore state in your application instead. See
 [Compatibility](../compatibility.md) and [FAQ](../faq.md).
 
 See also [Mixing with NiceGUI pages](mixed-nicegui-pages.md).

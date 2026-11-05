@@ -205,16 +205,11 @@ def clamp_page(value: int, *, min_value: int, max_value: int) -> int:
 
 
 def _apply_dom_attrs(element: Any, attrs: dict[str, Any]) -> None:
-    parts: list[str] = []
     for key, val in attrs.items():
-        if val is True:
-            parts.append(str(key))
-        elif val is False or val is None or val == "":
+        if val is False or val is None or val == "":
             continue
-        else:
-            parts.append(f"{key}={val}")
-    if parts:
-        element.props(" ".join(parts))
+        element._props[str(key)] = True if val is True else str(val)
+    element.update()
 
 
 def _set_text(element: Any, text: str) -> None:

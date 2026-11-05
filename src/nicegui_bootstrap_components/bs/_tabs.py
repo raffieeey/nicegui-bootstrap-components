@@ -40,7 +40,6 @@ __all__ = [
 ]
 
 _PERSIST_VALUES = ("off", "local", "session", "memory")
-_ACTIVE_TAB_MEMORY: dict[str, str] = {}
 
 _TABLIST_KEYDOWN = """(e) => {
   const key = e.key;
@@ -343,13 +342,11 @@ class _TabsImpl(BootstrapElement):
         assigned = assign_tab_ids([tab._explicit_tab_id for tab in self._tabs])
         for tab, tab_id in zip(self._tabs, assigned, strict=True):
             tab._tab_id = tab_id
-        self._restore_persist()
         self._ensure_active()
         for tab in self._tabs:
             self._mount_pane(tab)
             self._create_nav_item(tab)
         self._apply_active_classes()
-        self._persist_save()
 
     def _consume_surface_kwargs(
         self,
@@ -370,11 +367,17 @@ class _TabsImpl(BootstrapElement):
                     persist = str(persistence_type)
                 else:
                     persist = "local"
+            if persist != "off":
+                raise NotImplementedError(
+                    "persistence is not supported; use application-managed storage"
+                )
             return persist, False, None
         persist = kwargs.pop("persist", "off")
         if persist not in _PERSIST_VALUES:
             allowed = ", ".join(repr(item) for item in _PERSIST_VALUES)
             raise ValueError(f"persist must be one of {allowed}, got {persist!r}")
+        if persist != "off":
+            raise NotImplementedError("persist is not supported; use application-managed storage")
         lazy = bool(kwargs.pop("lazy", False))
         on_change = kwargs.pop("on_change", None)
         return str(persist), lazy, on_change
@@ -421,36 +424,11 @@ class _TabsImpl(BootstrapElement):
         if value is None:
             self._ensure_active()
         self._apply_active_classes()
-        self._persist_save()
 
     @property
     def tab_ids(self) -> list[str]:
         self._sync_tabs()
         return [tab.tab_id for tab in self._tabs if tab.tab_id is not None]
-
-    def _persist_key(self) -> str | None:
-        public = self._props.get("id")
-        if isinstance(public, str) and public:
-            return public
-        return None
-
-    def _restore_persist(self) -> None:
-        if self._persist == "off" or self._requested_active is not None:
-            return
-        key = self._persist_key()
-        if key is None:
-            return
-        remembered = _ACTIVE_TAB_MEMORY.get(key)
-        known = {tab.tab_id for tab in self._tabs}
-        if remembered and remembered in known:
-            self._active_tab = remembered
-
-    def _persist_save(self) -> None:
-        if self._persist == "off" or self._active_tab is None:
-            return
-        key = self._persist_key()
-        if key is not None:
-            _ACTIVE_TAB_MEMORY[key] = self._active_tab
 
     def _ensure_active(self) -> None:
         ids = [tab.tab_id for tab in self._tabs if tab.tab_id is not None]
@@ -518,7 +496,6 @@ class _TabsImpl(BootstrapElement):
             if tab is not None and tab in self._lazy_held:
                 self._mount_pane(tab)
         self._apply_active_classes()
-        self._persist_save()
         if from_user and self._on_change is not None:
             self._on_change(tab_id)
 
@@ -596,7 +573,6 @@ class _TabsImpl(BootstrapElement):
         if self._active_tab not in known_ids:
             self._ensure_active()
             self._apply_active_classes()
-            self._persist_save()
 
 
 Tab, DbcTab = make_surface_classes("Tab", globals())

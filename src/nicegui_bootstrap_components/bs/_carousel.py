@@ -86,6 +86,8 @@ def _validate_persist(persist: str, public_id: str | None) -> None:
         raise ValueError(f"persist must be 'off', 'local', or 'session', got {persist!r}")
     if persist != "off" and not public_id:
         raise ValueError("persist requires a public id when not 'off'")
+    if persist != "off":
+        raise NotImplementedError("persist is not supported; use application-managed storage")
 
 
 class _CarouselImpl(BootstrapElement):

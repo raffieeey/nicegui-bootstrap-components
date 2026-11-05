@@ -47,7 +47,8 @@ The tab strip stays the navigation; the child is the page.
 `active_tab` is the identifier of the selected panel. Keep it in application state
 so deep links, breadcrumbs, and the tab strip all agree. `on_change` is the Python
 handler for a user-driven switch: persist the choice, lazy-load the panel, or sync
-a URL parameter.
+a URL parameter. Built-in `persist` and enabled compat `persistence` are
+unsupported and raise an error; manage storage in your application.
 
 {{example:examples/components/tabs/active_tab_on_change.py:demo}}
 

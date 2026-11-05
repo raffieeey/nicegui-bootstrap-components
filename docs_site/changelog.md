@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.1.2] - 2026-11-05
+
+### Security
+
+- Preserve Button, NavLink and Breadcrumb attribute values as structured data instead of parsing interpolated property strings.
+- Ignore server-side clicks on disabled ListGroupItem components.
+
+### Fixed
+
+- Remove remote font imports from bundled themes so they remain self-contained.
+- Fully hide dismissed fade alerts and their interactive descendants; reopening remains supported. Dismissal now hides immediately rather than animating out.
+
+### Changed
+
+- Reject unsupported component persistence modes with a clear error rather than silently discarding state. The shared Tabs persistence map has been removed.
+- Built-in browser storage is not implemented; use application-managed storage.
+
 ## [0.1.1] - 2026-10-09
 
 ### Fixed

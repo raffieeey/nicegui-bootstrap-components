@@ -183,11 +183,10 @@ pip install -e ".[dev]"
 pytest
 ```
 
-`python -m playwright install chromium`. At 0.1.1, the default run carries
-654 passing tests plus the Playwright browser suite and the visual matrix; mypy and
-ruff are clean. CI runs three GitHub Actions jobs (checks, docs, browser). The
-browser suite uses real Chromium. Every Python block in the docs and every
-example is executed by tests, so a snippet that cannot run fails CI.
+Install Chromium for browser tests with `python -m playwright install chromium`.
+CI runs checks, documentation and browser jobs. The browser suite uses real
+Chromium alongside a visual matrix. Python documentation blocks and examples
+are executed by tests, so a snippet that cannot run fails CI.
 
 ## License
 
@@ -195,5 +194,7 @@ MIT. See [LICENSE](LICENSE).
 
 ## Status
 
-0.1.1, maintenance release. Matches the dash-bootstrap-components 2.0.4 API for the
-component set listed above.
+0.1.2, security and correctness release. Matches the dash-bootstrap-components
+2.0.4 API for the component set listed above, with documented adaptations.
+Built-in persistence is unsupported: non-off persistence modes raise an error.
+Use application-managed storage instead.

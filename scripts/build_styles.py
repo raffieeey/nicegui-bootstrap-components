@@ -519,8 +519,51 @@ def _render_at_rule(node: object) -> str:
     return "@" + node.at_keyword + serialize(node.prelude) + "{" + _render_nodes(nested) + "}"
 
 
-def transform_css(css: str) -> str:
+def strip_remote_imports(css: str) -> str:
+    """Remove remote top-level imports while retaining all other bytes."""
     nodes = parse_stylesheet(css, skip_whitespace=False, skip_comments=False)
+    offsets = [0]
+    for line in css.splitlines(keepends=True):
+        offsets.append(offsets[-1] + len(line))
+    spans: list[tuple[int, int]] = []
+    for node in nodes:
+        if not (
+            getattr(node, "type", None) == "at-rule"
+            and getattr(node, "lower_at_keyword", "") == "import"
+            and re.search(r"(?:https?:)?//", serialize(node.prelude), re.IGNORECASE)
+        ):
+            continue
+        start = offsets[node.source_line - 1] + node.source_column - 1
+        quote = ""
+        escaped = False
+        depth = 0
+        for i in range(start, len(css)):
+            char = css[i]
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif quote:
+                if char == quote:
+                    quote = ""
+            elif char in "\"'":
+                quote = char
+            elif char == "(":
+                depth += 1
+            elif char == ")":
+                depth -= 1
+            elif char == ";" and depth == 0:
+                spans.append((start, i + 1))
+                break
+        else:
+            raise ValueError("unterminated remote CSS import")
+    for start, end in reversed(spans):
+        css = css[:start] + css[end:]
+    return css
+
+
+def transform_css(css: str) -> str:
+    nodes = parse_stylesheet(strip_remote_imports(css), skip_whitespace=False, skip_comments=False)
     return _render_nodes(nodes)
 
 
@@ -679,7 +722,7 @@ def build() -> None:
         _manifest_match(entries, spec, digest)
         actual_entries.append(_manifest_entry(spec, digest))
         if spec.asset_type == "theme":
-            text = _strip_source_maps(source.decode("utf-8"))
+            text = strip_remote_imports(_strip_source_maps(source.decode("utf-8")))
             _write_pair(
                 f"ngbs-{spec.name}.css",
                 _append_policy(scope_css(text)).encode("utf-8"),
