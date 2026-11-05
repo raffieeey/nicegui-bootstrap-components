@@ -194,7 +194,7 @@ MIT. See [LICENSE](LICENSE).
 
 ## Status
 
-0.1.2, security and correctness release. Matches the dash-bootstrap-components
+0.1.3, maintenance release. Matches the dash-bootstrap-components
 2.0.4 API for the component set listed above, with documented adaptations.
 Built-in persistence is unsupported: non-off persistence modes raise an error.
 Use application-managed storage instead.

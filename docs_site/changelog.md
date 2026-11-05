@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.1.3] - 2026-11-05
+
+### Fixed
+
+- Propagate Python-side `.value` assignments to the native DOM-facing value properties for Input, Textarea and Select.
+- Keep Select option selection flags synchronized with programmatic value changes.
+- Add regression coverage for server-side value updates.
+
+Thanks to @evnchn for [#2](https://github.com/raffieeey/nicegui-bootstrap-components/pull/2).
+
 ## [0.1.2] - 2026-11-05
 
 ### Security
