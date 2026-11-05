@@ -37,7 +37,7 @@ from nicegui_bootstrap_components.bs._forms import (
     label,
     label_classes,
 )
-from nicegui_bootstrap_components.bs._inputs import DbcInput, Input
+from nicegui_bootstrap_components.bs._inputs import DbcInput, Input, Textarea
 
 pytest_plugins = ["nicegui.testing.plugin"]
 pytestmark = pytest.mark.user
@@ -235,3 +235,19 @@ async def test_input_password_type_reaches_native_attribute(user: User) -> None:
     for element in inputs:
         assert element.tag == "input"
         assert element._props["type"] == "password"
+
+
+async def test_input_and_textarea_server_value_reaches_dom_prop(user: User) -> None:
+    setup(mode=StyleMode.MIXED)
+    box: dict[str, Input | Textarea] = {}
+
+    @ui.page("/")
+    def page() -> None:
+        box["input"] = Input(value="old")
+        box["textarea"] = Textarea(value="old")
+
+    await user.open("/")
+    for element in box.values():
+        element.value = "new"
+        assert element._props["value"] == "new"
+        assert element._props["model-value"] == "new"

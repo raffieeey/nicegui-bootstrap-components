@@ -308,6 +308,11 @@ class _TextControlBase(BootstrapValueElement):
         self._props["value"] = text
         self._props["model-value"] = text
 
+    def _handle_value_change(self, *args: Any, **kwargs: Any) -> None:
+        super()._handle_value_change(*args, **kwargs)
+        if self._props.get("value") != ("" if self.value is None else str(self.value)):
+            self._sync_value_attr(self.value)
+
     def _publish(self, e: Any) -> None:
         raw = _payload(e)
         if raw is None:
@@ -325,7 +330,6 @@ class _TextControlBase(BootstrapValueElement):
             self.set_value(raw)
         else:
             self.value = raw
-        self._sync_value_attr(raw)
 
     def _on_input(self, e: Any) -> None:
         self._publish(e)
