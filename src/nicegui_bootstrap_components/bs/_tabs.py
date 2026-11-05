@@ -368,7 +368,9 @@ class _TabsImpl(BootstrapElement):
                 else:
                     persist = "local"
             if persist != "off":
-                raise NotImplementedError("persistence is not supported; use application-managed storage")
+                raise NotImplementedError(
+                    "persistence is not supported; use application-managed storage"
+                )
             return persist, False, None
         persist = kwargs.pop("persist", "off")
         if persist not in _PERSIST_VALUES:

@@ -146,8 +146,7 @@ def test_f04_import_transform_preserves_local_import_and_bytes() -> None:
         'a { content: "unchanged"; }\n'
     )
     assert strip_remote_imports(source) == (
-        '/* license */\n@import "local.css";\n\n\n'
-        'a { content: "unchanged"; }\n'
+        '/* license */\n@import "local.css";\n\n\na { content: "unchanged"; }\n'
     )
 
 
