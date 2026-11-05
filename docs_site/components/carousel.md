@@ -24,7 +24,8 @@ leave the default. `slide` defaults to `True` for the sliding transition.
 
 {{example:examples/components/carousel/controls_indicators_interval.py:demo}}
 
-`on_change` fires when the active slide changes. `persist` defaults to `"off"`.
+`on_change` fires when the active slide changes. `persist` defaults to `"off"`;
+non-off persistence is unsupported and raises an error.
 Keep every item's `alt` filled in even when the caption already describes the
 image — the caption is visible copy, `alt` is for the `img`.
 

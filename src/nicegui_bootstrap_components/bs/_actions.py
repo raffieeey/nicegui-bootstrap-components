@@ -122,16 +122,11 @@ def button_group_classes(*, size: str | None = None, vertical: bool = False) -> 
 
 
 def _apply_dom_attrs(element: Any, attrs: dict[str, Any]) -> None:
-    parts: list[str] = []
     for key, val in attrs.items():
-        if val is True:
-            parts.append(str(key))
-        elif val is False or val is None or val == "":
+        if val is False or val is None or val == "":
             continue
-        else:
-            parts.append(f"{key}={val}")
-    if parts:
-        element.props(" ".join(parts))
+        element._props[str(key)] = True if val is True else str(val)
+    element.update()
 
 
 class _ButtonImpl(BootstrapElement):

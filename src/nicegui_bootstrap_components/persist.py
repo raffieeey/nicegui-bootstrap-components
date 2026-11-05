@@ -1,4 +1,9 @@
-"""Adapted persistence helpers and navigation policy."""
+"""Legacy persistence utilities and navigation policy.
+
+The synchronous persistence utilities are not connected to components and do
+not provide a supported browser-storage lifecycle. Use application-managed
+storage instead; component persistence options reject non-off modes.
+"""
 
 from __future__ import annotations
 

@@ -53,7 +53,7 @@ for review layouts.
 publishes (subject to `debounce`). `on_submit` fires when the control submits
 — typically Enter in a text field — and `n_submit` counts those events.
 `on_blur` / `n_blur` track focus leaving the control. `persist` defaults to
-`"off"`.
+`"off"`; non-off values are unsupported and raise an error. Use application-managed storage.
 
 ## Notes
 

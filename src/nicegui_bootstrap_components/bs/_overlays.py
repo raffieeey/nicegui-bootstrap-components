@@ -2368,6 +2368,10 @@ class _AccordionImpl(BootstrapElement):
         id: str | None = None,
         key: Any = None,
     ) -> None:
+        if persist not in {"off", "local", "session"}:
+            raise ValueError("persist must be 'off', 'local', or 'session'")
+        if persist != "off":
+            raise NotImplementedError("persist is not supported; use application-managed storage")
         surface = _surface_of(self, _surface)
         with contextlib.suppress(Exception):
             self._surface = surface

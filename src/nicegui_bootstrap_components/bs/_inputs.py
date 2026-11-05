@@ -399,6 +399,8 @@ class _InputImpl(_TextControlBase):
             raise ValueError("persist must be 'off', 'local', or 'session'")
         if persist != "off" and not id:
             raise ValueError("persist requires a public id")
+        if persist != "off":
+            raise NotImplementedError("persist is not supported; use application-managed storage")
         if value is None:
             value = ""
         super().__init__(
@@ -498,6 +500,8 @@ class _TextareaImpl(_TextControlBase):
             raise ValueError("persist must be 'off', 'local', or 'session'")
         if persist != "off" and not id:
             raise ValueError("persist requires a public id")
+        if persist != "off":
+            raise NotImplementedError("persist is not supported; use application-managed storage")
         if value is None:
             value = ""
         super().__init__(

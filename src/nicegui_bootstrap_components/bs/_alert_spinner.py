@@ -63,6 +63,8 @@ def alert_structural_classes(
         classes.append("fade")
         if is_open:
             classes.append("show")
+        else:
+            classes.append("d-none")
     elif not is_open:
         classes.append("d-none")
     return classes
@@ -251,10 +253,9 @@ class _AlertImpl(BootstrapElement):
                 self.classes(add="show", remove="d-none")
             else:
                 self.classes(remove="d-none")
-        elif self._fade:
-            self.classes(remove="show")
         else:
-            self.classes(add="d-none")
+            # Hide immediately: opacity alone leaves descendants interactive.
+            self.classes(add="d-none", remove="show")
 
     def _cancel_timer(self) -> None:
         timer = self._timer

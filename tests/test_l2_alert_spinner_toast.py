@@ -78,6 +78,7 @@ def test_alert_structural_classes_closed_fade() -> None:
         "alert",
         "alert-warning",
         "fade",
+        "d-none",
     ]
 
 

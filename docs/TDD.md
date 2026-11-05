@@ -1,5 +1,7 @@
 # nicegui-bootstrap-components — Technical Design Document
 
+> Implementation status: this is a historical design, not a feature guarantee. Built-in component persistence is currently unsupported; non-off `persist` and enabled compat Tabs `persistence` raise an error. Use application-managed storage.
+
 **Status:** Implementation-ready  
 **Revision:** 1  
 **Compatibility oracle:** dash-bootstrap-components 2.0.4 (tag / PyPI, 2025-08-20)  

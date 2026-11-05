@@ -8,7 +8,7 @@ listed below.
 | Category | DBC 2.0.4 | This library |
 | --- | --- | --- |
 | Callbacks | Dash callback graph | NiceGUI handlers (`on_click`, `on_change`, and related) |
-| Persistence | Dash `persistence` / `persisted_props` | Persist analogue (`persist="local\|session"`, public `id` required) |
+| Persistence | Dash `persistence` / `persisted_props` | Unsupported; non-off `persist` and enabled compat Tabs `persistence` raise an error |
 | Loading | Dash loading wrapper | Explicit `loading` |
 | Pattern-matching IDs | Dash `MATCH` / `ALL` / `ALLSMALLER` | Excluded |
 | `external_link` on Button | Anchor behaviour in Dash | Applied only when the Button is rendered as an anchor |

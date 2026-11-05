@@ -949,6 +949,7 @@ class _ListGroupItemImpl(BootstrapElement):
             context_default=_LIST_GROUP_ITEM_DEFAULT_TAG.get(),
         )
         self._n_clicks = int(n_clicks)
+        self.disabled = bool(disabled)
         self._on_click = on_click
         super().__init__(children, tag=self._resolved_tag, **kwargs)
         _apply_interactive_props(
@@ -961,6 +962,8 @@ class _ListGroupItemImpl(BootstrapElement):
         self.on("click", self._handle_click)
 
     def _handle_click(self, *_args: Any, **_kwargs: Any) -> None:
+        if self.disabled:
+            return
         self._n_clicks += 1
         if self._on_click is not None:
             self._on_click()

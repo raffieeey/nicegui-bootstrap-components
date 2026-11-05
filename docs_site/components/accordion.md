@@ -57,7 +57,7 @@ With `always_open=True`, `active_item` is a list of ids.
 
 `AccordionItem` also accepts `title_class_name` for the header control, plus the
 shared layout props `class_name`, `style`, and `id`. `persist` defaults to
-`"off"`. Give each item a stable `item_id` if you drive `active_item` from
+`"off"`; non-off persistence is unsupported and raises an error. Give each item a stable `item_id` if you drive `active_item` from
 Python. Header click counts from Dash are not a separate accordion prop here;
 interactive wiring follows NiceGUI handlers. See the compatibility page for how
 Dash-style props are adapted.

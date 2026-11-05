@@ -76,7 +76,7 @@ for each component on both surfaces.
 
 ## Adapted semantics
 
-- Persistence analogue: `persist="local|session"` requires a public `id`.
+- Built-in component persistence is unsupported: non-off `persist` and enabled compat Tabs persistence raise an error. Use application-managed storage.
 - Navigation analogue: internal versus external link policy (for example
   `external_link` on Button applies only when the control is rendered as an
   anchor).

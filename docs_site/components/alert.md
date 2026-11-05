@@ -32,7 +32,8 @@ Alerts can carry headings, paragraphs, and dividers.
 ## Dismissing
 
 Set `dismissable=True` to add a dismiss button, or drive `is_open` yourself.
-`fade=False` disables the fade animation.
+Dismissal hides the alert immediately, even with `fade=True`, so its descendants
+cannot be focused or clicked. Reopening restores visibility; there is no exit fade.
 
 {{example:examples/components/alert/dismissible.py:demo}}
 
