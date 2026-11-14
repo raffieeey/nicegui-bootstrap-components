@@ -108,12 +108,13 @@ _FIRST_APP_SNIPPETS = (
     ("README.md", "## Quickstart"),
     ("docs_site/index.md", None),
     ("docs_site/quickstart.md", "## Your first app"),
+    ("docs_site/quickstart.md", "## Themes"),
 )
 
 
 @pytest.mark.parametrize(("relpath", "heading"), _FIRST_APP_SNIPPETS, ids=lambda v: str(v))
 def test_first_app_snippet_registers_css(relpath: str, heading: str | None) -> None:
-    """A copy-pasted first app must call setup(), or every component renders unstyled."""
+    """A copy-pasted app must call setup(): components render unstyled and set_theme() raises."""
     text = (REPO_ROOT / relpath).read_text(encoding="utf-8")
     if heading is not None:
         text = text.split(heading, 1)[1]

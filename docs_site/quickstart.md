@@ -73,7 +73,9 @@ from there:
 
 ```python
 from nicegui import ui
-from nicegui_bootstrap_components import ThemeController, bs
+from nicegui_bootstrap_components import ThemeController, bs, setup
+
+setup()
 
 @ui.page("/")
 def index() -> None:
