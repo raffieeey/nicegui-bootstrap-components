@@ -102,3 +102,22 @@ def test_docs_code_blocks_execute(page: Path) -> None:
             detail = last_line[-1] if last_line else "no stderr"
             failures.append(f"{key}: {detail}")
     assert not failures, "docs code blocks failed:\n" + "\n".join(failures)
+
+
+_FIRST_APP_SNIPPETS = (
+    ("README.md", "## Quickstart"),
+    ("docs_site/index.md", None),
+    ("docs_site/quickstart.md", "## Your first app"),
+)
+
+
+@pytest.mark.parametrize(("relpath", "heading"), _FIRST_APP_SNIPPETS, ids=lambda v: str(v))
+def test_first_app_snippet_registers_css(relpath: str, heading: str | None) -> None:
+    """A copy-pasted first app must call setup(), or every component renders unstyled."""
+    text = (REPO_ROOT / relpath).read_text(encoding="utf-8")
+    if heading is not None:
+        text = text.split(heading, 1)[1]
+    block = _blocks(text)[0]
+    probe = "\nfrom nicegui_bootstrap_components import assets as _a\nassert _a._MANAGER is not None, 'setup() never ran'\n"
+    result = _run_block(block + probe)
+    assert result.returncode == 0, (result.stderr or "").strip().splitlines()[-1:]

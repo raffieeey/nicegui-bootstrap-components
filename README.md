@@ -31,7 +31,9 @@ terminal.
 
 ```python
 from nicegui import ui
-from nicegui_bootstrap_components import bs
+from nicegui_bootstrap_components import bs, setup
+
+setup()
 
 with bs.scope(), bs.container():
     with bs.row():

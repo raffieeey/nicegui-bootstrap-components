@@ -25,7 +25,9 @@ Create a module, wrap Bootstrap widgets in `bs.scope()`, and start NiceGUI:
 
 ```python
 from nicegui import ui
-from nicegui_bootstrap_components import bs
+from nicegui_bootstrap_components import bs, setup
+
+setup()
 
 with bs.scope():
     bs.button("Hello", color="primary")
