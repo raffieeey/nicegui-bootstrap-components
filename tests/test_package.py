@@ -39,4 +39,5 @@ def test_nicegui_dependency_allows_future_minor_but_not_major() -> None:
     assert len(nicegui) == 1
     assert "3.17.1" in nicegui[0].specifier
     assert "3.18.0" in nicegui[0].specifier
-    assert "4.0.0" not in nicegui[0].specifier
+    assert "4.0.0" in nicegui[0].specifier
+    assert "5.0.0" not in nicegui[0].specifier

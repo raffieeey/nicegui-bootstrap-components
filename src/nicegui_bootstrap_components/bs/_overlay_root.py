@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import asyncio
 import json
 from typing import Any
 
@@ -48,11 +47,7 @@ def get_or_create_overlay_root() -> Any:
         "document.body.appendChild(el);"
         "})();"
     )
-    response = run_javascript(js)
-    fire = getattr(response, "_fire", None)
-    if fire is not None:
-        task = asyncio.ensure_future(fire())
-        task.add_done_callback(lambda _t: None)
+    run_javascript(js)
     return root
 
 

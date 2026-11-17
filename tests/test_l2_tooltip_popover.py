@@ -2,8 +2,12 @@
 
 from __future__ import annotations
 
+import asyncio
+import gc
+from typing import Any
+
 import pytest
-from nicegui import ui
+from nicegui import context, ui
 from nicegui.testing import User
 
 from nicegui_bootstrap_components import StyleMode, setup
@@ -296,3 +300,30 @@ async def test_popover_portals_to_overlay_root(user: User) -> None:
         assert root in _overlay_ancestors(pop)
 
     await user.open("/")
+
+
+@pytest.mark.user
+async def test_overlay_root_script_is_sent_once_without_errors(user: User) -> None:
+    sent: list[str] = []
+    errors: list[dict] = []
+    asyncio.get_running_loop().set_exception_handler(lambda _loop, ctx: errors.append(ctx))
+
+    @ui.page("/")
+    def page() -> None:
+        outbox = context.client.outbox
+        enqueue = outbox.enqueue_message
+
+        def spy(message_type: str, data: Any, target_id: Any) -> None:
+            if message_type == "run_javascript" and "ngbs-overlay-root" in data["code"]:
+                sent.append(data["code"])
+            enqueue(message_type, data, target_id)
+
+        outbox.enqueue_message = spy  # type: ignore[method-assign]
+        ensure_overlay_root()
+
+    await user.open("/")
+    await asyncio.sleep(0.1)
+    gc.collect()
+    await asyncio.sleep(0)
+    assert len(sent) == 1
+    assert errors == []
