@@ -17,7 +17,7 @@ Requires Python 3.10 or later. Install from PyPI:
 pip install nicegui-bootstrap-components
 ```
 
-The library targets NiceGUI 3.17.1 and Bootstrap 5.3.8.
+The library supports NiceGUI 3.17.1 through 4.x and bundles Bootstrap 5.3.8.
 
 ## Your first app
 

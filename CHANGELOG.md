@@ -3,6 +3,20 @@
 All notable changes to this project are documented in this file. The format is
 based on Keep a Changelog and this project adheres to Semantic Versioning.
 
+## [0.1.4] - 2026-11-19
+
+### Changed
+
+- Support NiceGUI 4. The dependency range is now `nicegui>=3.17.1,<5`, and CI
+  tests the latest 4.x release alongside 3.17.1 and the latest 3.x release.
+
+### Fixed
+
+- Send the overlay root script once instead of twice, and stop calling a private
+  NiceGUI API that raises an error on the next NiceGUI release.
+
+Thanks to @evnchn for [#4](https://github.com/raffieeey/nicegui-bootstrap-components/pull/4).
+
 ## [0.1.3] - 2026-11-05
 
 ### Fixed

@@ -2472,9 +2472,10 @@ Changelog fragments in `changelog.d/`. Migration notes for observable breaks. Py
 
 Revision note (R1): pin wording unified to “first beta” (was “first alpha” vs OQ17).
 
-Current implementation: the public 0.1.x package uses `nicegui>=3.17.1,<4` rather
-than the earlier proposed minor pin. CI runs the non-browser suite against the
-minimum and latest available 3.x NiceGUI every push and weekly, while the browser
+Current implementation: the public 0.1.x package uses `nicegui>=3.17.1,<5` rather
+than the earlier proposed minor pin (widened from `<4` in 0.1.4). CI runs the
+non-browser suite against the minimum and the latest available 3.x and 4.x NiceGUI
+every push and weekly, while the browser
 suite runs against the latest resolver choice. This is a compatibility policy, not
 proof of unshipped future versions; a failing canary requires a compatibility fix.
 
